@@ -29,6 +29,7 @@ const TradingViewWidget=({title,scriptUrl,config,height=600,className}:TradingVi
       ref={containerRef} 
       className={cn('tradingview-widget-container', className)}
     />
+    
     {/* <div className="tradingview-widget-container_widget" style={{height,width:"100%"}} /> */}
   </div>
 );
