@@ -1,4 +1,4 @@
-import { connectToDatabase } from "@/databse/mongoose";
+import { connectToDatabase } from "@/database/mongoose";
 
 async function main() {
   try {

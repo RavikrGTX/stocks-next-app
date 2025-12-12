@@ -8,6 +8,8 @@ import FooterLink from '@/components/forms/FooterLink';
 // import {toast} from "sonner";
 // import {signInEmail} from "better-auth/api";
 import {useRouter} from "next/navigation";
+import { signInWithEmail } from '@/lib/actions/auth.actions';
+import { toast } from 'sonner';
 
 const SignIn = () => {
     const router = useRouter()
@@ -25,8 +27,15 @@ const SignIn = () => {
 
     const onSubmit = async (data: SignInFormData) => {
         try {
-            console.log("sign in");
+            const result= await signInWithEmail(data);
+            console.log(result)
+         
+            console.log("sign in aythundi");
+               if(result.success) router.push('/');
         } catch (e) {
+            toast.error('Sign in failed',{
+                description: e instanceof Error ? e.message : 'Failed to sign in.'
+            })
             console.error(e);
             
         }
@@ -56,7 +65,7 @@ const SignIn = () => {
                     validation={{ required: 'Password is required', minLength: 8 }}
                 />
 
-                <Button type="submit" disabled={isSubmitting} className="yellow-btn w-full mt-5">
+                <Button  type="submit" disabled={isSubmitting} className="yellow-btn w-full mt-5">
                     {isSubmitting ? 'Signing In' : 'Sign In'}
                 </Button>
 

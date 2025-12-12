@@ -3,7 +3,7 @@ import Image from "next/image"
 import NavItems from "./NavItems"
 import Dropdown from "./Dropdown"
 
-const Header = () => {
+const Header = ({user}:{user:User}) => {
   return (
     <header className='sticky top-0'>
 
@@ -14,7 +14,7 @@ const Header = () => {
             <nav className="hidden sm:block">
               <NavItems/>
             </nav>
-           <Dropdown/>
+           <Dropdown user={user} />
         </div>
     </header>
   )
