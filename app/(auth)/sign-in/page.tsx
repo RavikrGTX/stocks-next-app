@@ -31,7 +31,7 @@ const SignIn = () => {
             console.log(result)
          
             console.log("sign in aythundi");
-               if(result.success) router.push('/');
+            if(result.success) router.push('/');
         } catch (e) {
             toast.error('Sign in failed',{
                 description: e instanceof Error ? e.message : 'Failed to sign in.'
