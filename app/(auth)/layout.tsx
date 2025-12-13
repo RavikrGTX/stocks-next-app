@@ -10,13 +10,13 @@ const layout = async({children}:{children: React.ReactNode}) => {
  const session = await auth.api.getSession({ headers: await headers() })
  
     if(session?.user) redirect('/')
-      
+
   return (
 
     <main className='auth-layout'>
         <section className="auth-left-section scrollbar-hide-default" >
             <Link href='/' className="auth-logo">
-            <Image src="/assets/icons/logo.svg" alt="Signalist logo" width={140} height={32} className="h-8 w-auto"/>
+            <Image src="/assets/icons/stocks-logo.png" alt="Signalist logo" width={140} height={32} className="h-8 w-auto"/>
             </Link>
                
       <div className="pb-6 lg:pb-8 flex-1">
@@ -28,12 +28,12 @@ const layout = async({children}:{children: React.ReactNode}) => {
       <section className="auth-right-section"> 
         <div  className="z-10 relative lg:mt-4 lg:mb-16"> 
             <blockquote className="auth-blockquote" >
-                signalist turned my watchlist into a winning list. The alerts are 
+                Ravi's Stock app helped me to track the Stock's Efficiently 
 
             </blockquote>
             <div className="flex items-center justify-between">
                 <div>
-                    <cite className="auth-testimonial-author">-Ethan R.</cite>
+                    <cite className="auth-testimonial-author">Rahul</cite>
                     <p className="max-md: text-xs text-gray-500">Retail Investor</p>
                 </div>
 
@@ -51,7 +51,7 @@ const layout = async({children}:{children: React.ReactNode}) => {
         </div>
 
         <div className="flex-1 relative">
-            <Image src="/assets/images/dashboard.png" alt="Dashboard Preview" width={140} height={1150} className="auth-dashboard-preview absolute top-0"/>
+            <Image src="/assets/icons/stocks-logo.png" alt="Dashboard Preview" width={100} height={100} className="auth-dashboard-preview "/>
         </div>
 
       </section>
