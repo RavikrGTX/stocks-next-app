@@ -16,7 +16,7 @@ const layout = async({children}:{children: React.ReactNode}) => {
     <main className='auth-layout'>
         <section className="auth-left-section scrollbar-hide-default" >
             <Link href='/' className="auth-logo">
-            <Image src="/assets/icons/stocks-logo.png" alt="Signalist logo" width={140} height={32} className="h-8 w-auto"/>
+            <Image src="/assets/icons/stock-gravity-logo.png" alt="Signalist logo" width={140} height={32} className="h-14 rounded-full w-auto"/>
             </Link>
                
       <div className="pb-6 lg:pb-8 flex-1">
@@ -51,7 +51,7 @@ const layout = async({children}:{children: React.ReactNode}) => {
         </div>
 
         <div className="flex-1 relative">
-            <Image src="/assets/icons/stocks-logo.png" alt="Dashboard Preview" width={100} height={100} className="auth-dashboard-preview "/>
+            <Image src="/assets/icons/stock-gravity-logo.png" alt="Dashboard Preview" width={100} height={100} className="auth-dashboard-preview "/>
         </div>
 
       </section>
